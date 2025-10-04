@@ -184,9 +184,17 @@ img {
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
 }
+.imagedimenstion {
+    width: 100%;
+}
+.flagimagedimenstion {
+    width: 80%;
+    height: 300px;
+}
 video {
     border-radius: 10px;
-    background-color: var(--backgroundbody)
+    background-color: var(--backgroundbody);
+    width: 100%;
 }
 .content {
     border-radius: 10px;
