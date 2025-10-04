@@ -184,10 +184,10 @@ img {
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
 }
-/* .imagedimenstion {
+.imagedimenstion {
     width: 100%;
 }
-.flagimagedimenstion {
+/* .flagimagedimenstion {
     width: 80%;
     height: 300px;
 } */
