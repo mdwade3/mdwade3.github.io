@@ -2,15 +2,16 @@
     --text: #120217;
     --background: #ffffff; 
     --primary: #0c132c;
-    --secondary: #bbdbf4;
-    --tertiarty: #e4f3ff;
-    --accent: #8c1d3e; 
-    --buttonselect: #e6c7d0; 
+    --secondary: #bbdbf4; 
+    --tertiarty: #e4f3ff; 
+    /* --accent: #8c1d3e; */
+    --accent: #a7005a;
+    --buttonselect: #820047;
     --border: #3d4256;
     --backgroundbody: #efefef;
     --primaryadjacent: #0c152e;
 } 
-body {
+body { 
     background-color: var(--backgroundbody);
     /* margin-top: 0; */
 }
@@ -35,8 +36,23 @@ h2, h3 {
     color: var(--primary);
     font-family: Georgia, "Times New Roman", serif;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-left: 20px;
+}
+h2.flagheader {
+    color: var(--background);
+    background-color: var(--primary);
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+    font-size: 200%;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding: 5px 0 5px 0px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px var(--border);;
+}
+a {
+    text-decoration: none;
 }
 nav { 
     background-color: var(--background);
@@ -100,52 +116,103 @@ main p {
     font-family: Tahoma, Helvetica, sans-serif;
     text-indent: 1em;
 }
- #homegraphic1 {
-    background-image: url(imagesCopy/flagMontage.png);
+main ul {
+    list-style-type: circle;
+    font-family: Tahoma, Helvetica, sans-serif;
+    margin-top: 0;
+}
+main li {
+    margin: 5px;
+}
+p.topmargin {
+    margin-top: 10px;
+}
+.graphic {
     background-color: var(--background);
-    background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px var(--border);
+    box-shadow: 1px 1px 3px var(--border)
+}
+ #homegraphic1 {
+    background-image: url(imagesCopy/flagMontage.png);
+    background-size: 100% 100%;
 }
 #homegraphic2 {
     background-image: url(imagesCopy/flagHeart.png);
-    background-color: var(--tertiarty);
-    background-size: 80% 90%;
+    background-size: 65% 90%;
     background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    box-shadow: 1px 1px 3px var(--border);
 }
 #homegraphic3 {
     background-image: url(imagesCopy/flagApollo.png);
-    background-color: var(--secondary);
     background-size: 90% 90%;
     background-position: center;
-    background-repeat: no-repeat;
+}
+#sedonagraphic {
+    background-image: url(imagesCopy/saguaro2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 10px;
+}
+/* #lighthousegraphic {
+    background-image: url(imagesCopy/lighthouse.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 10px;
+} */
+#sunflowergraphic {
+    background-image: url(imagesCopy/sunflower3.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 10px;
+}
+#sunflowergraphic2 {
+    background-image: url(imagesCopy/sunflower2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 10px;
+}
+/* #arizonagraphic {  YOU NEED TO TURN THIS INTO A IMG TAG 
+    background-image: url(imagesCopy/arizonaflag.png);
+    background-size: 100% 100%;
+} */
+.centerimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img { 
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
+}
+video {
+    border-radius: 10px;
+    background-color: var(--backgroundbody)
 }
 .content {
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
+    background-color: var(--background);
 }
-#content0 {
+.contentextragrid {
     background-color: var(--backgroundbody);
     display: grid;
     gap: .5em;
     grid-template-rows: auto;
 }
-#content0top { /* this is needs to be fixed to be more proper, you shouldn't use an id just to color it */
+.contentextragridtop { /* this is needs to be fixed to be more proper, you shouldn't use an id just to color it */
+    background-color: var(--background);
+} 
+.contentextragridbottom { /* this is needs to be fixed to be more proper, you shouldn't use an id just to color it */
     background-color: var(--background);
 }
-#content0bottom { /* this is needs to be fixed to be more proper, you shouldn't use an id just to color it */
+/* #contentextragridflag {
     background-color: var(--background);
-}
-#content0_flag {
-    background-color: var(--background);
-}
-#content1 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 1px 1px 3px var(--border);
+    border: 2px solid var(--primary)
+} */
+/* #content1 {
     background-color: var(--tertiarty);
 }
 #content2 {
@@ -156,7 +223,7 @@ main p {
 }
 #content4 {
     background-color: var(--secondary);
-}
+} */
 .submitbutton {
     background-color: var(--accent);
     color: var(--background);
@@ -167,7 +234,7 @@ main p {
 }
 input:hover {
     background-color: var(--buttonselect);
-    color: var(--text);
+    color: var(--background);
     cursor: pointer;
 }
 input[type="email"] {
@@ -175,11 +242,71 @@ input[type="email"] {
     background-color: var(--background);
     color: var(--text);
 }
+video[poster="imagesCopy/sunsetsaguaro.PNG"] {
+    object-fit: cover;
+}
 form {
     margin-bottom: 10px;
 }
+caption {
+    color: var(--primary);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 175%;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: var(--background);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+table { /* would like to make the edges rounded */
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: var(--background);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+th {
+    color: var(--primary);
+    font-family: Georgia, "Times New Roman", serif;
+}
+td {
+    font-family: Tahoma, Helvetica, sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* td.topalign {  LOOK BACK INTO USING THIS IF YOU CAN'T FIND EASIER SOLUTION
+    vertical-align: top;
+} */ 
+th, td {
+    padding: 5px;
+    border: 2px solid var(--primary);
+    border-collapse: collapse;
+}
+tr:nth-of-type(odd) {
+    background-color: var(--backgroundbody);
+}
+tr:first-of-type {
+    background-color: var(--secondary);
+}
+.symboltable {
+    text-align: center;
+    border-left: none;
+}
+.noborderbottom {
+    border-bottom: none;
+}
+.noborderleft {
+    border-left: none;
+}
+.noborderright {
+    border-right: none;
+}
 .noindent {
     text-indent: 0;
+}
+.borderprimary {
+    border: 2px solid var(--primary);
 }
 footer {
     color: var(--background);
@@ -216,8 +343,6 @@ footer {grid-area: footer;}
         "header   header"  65px
         "nav      nav"     40px
         "main     main" 
-        "main     main" 
-        "main     main"
         "footer   footer"
         / 1fr 1fr;
 }
