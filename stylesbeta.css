@@ -9,9 +9,9 @@
     --buttonselect: #820047;
     --border: #3d4256;
     --backgroundbody: #efefef;
-    --primaryadjacent: #0c152e;
+    --primaryadjacent: #0c152e; 
 } 
-body {  
+body { 
     background-color: var(--backgroundbody);
     /* margin-top: 0; */
 }
@@ -32,7 +32,7 @@ h1 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-h2, h3 {
+h2, h3, h4 {
     color: var(--primary);
     font-family: Georgia, "Times New Roman", serif;
     margin-top: 10px;
@@ -123,6 +123,7 @@ main ul {
 }
 main li {
     margin: 5px;
+    padding: 0 20px 0 0;
 }
 p.topmargin {
     margin-top: 10px;
@@ -159,14 +160,20 @@ p.topmargin {
     background-position: center;
     border-radius: 10px;
 } */
-#sunflowergraphic {
+/* #sunflowergraphic {
     background-image: url(imagesCopy/sunflower3.png);
     background-size: 100% 100%;
     background-position: center;
     border-radius: 10px;
-}
+} */
 #sunflowergraphic2 {
     background-image: url(imagesCopy/sunflower2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 10px;
+}
+#redbudgraphic {
+    background-image: url(imagesCopy/redbud.png);
     background-size: 100% 100%;
     background-position: center;
     border-radius: 10px;
@@ -183,10 +190,44 @@ p.topmargin {
 img { 
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
+    object-fit: cover;
+}
+.cover {
+    object-fit: cover;
+}
+.flagimage { /*set your height and width using this class selector? */
+    transition: all ease 0.5s;
+}
+a img:hover {
+    transform: scale(1.01);
 }
 .imagedimenstion {
     width: 100%;
 }
+figure {
+    text-align: center;
+}
+figure img {
+    border-radius: 0;
+    box-shadow: 0 0;
+}
+figcaption {
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size: .8em;
+    color: var(--border)
+}
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+} 
+.flexboxcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+} 
 /* .flagimagedimenstion {
     width: 80%;
     height: 300px;
@@ -195,6 +236,9 @@ video {
     border-radius: 10px;
     background-color: var(--backgroundbody);
     width: 100%;
+}
+video[poster] {
+    object-fit: cover;
 }
 .content {
     border-radius: 10px;
@@ -249,9 +293,6 @@ input[type="email"] {
     cursor: text;
     background-color: var(--background);
     color: var(--text);
-}
-video[poster="imagesCopy/sunsetsaguaro.PNG"] {
-    object-fit: cover;
 }
 form {
     margin-bottom: 10px;
@@ -313,8 +354,25 @@ tr:first-of-type {
 .noindent {
     text-indent: 0;
 }
+.extramarginbottom {
+    margin-bottom: 30px;
+}
+.extramarginbottom2 {
+    margin-bottom: 10px;
+}
 .borderprimary {
     border: 2px solid var(--primary);
+}
+details {
+    padding: 0 20px 0;
+    margin: 5px 0 5px;
+    cursor: pointer;
+}
+summary {
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+details p {
+    text-indent: 0;
 }
 footer {
     color: var(--background);
