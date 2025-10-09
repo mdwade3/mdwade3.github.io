@@ -261,6 +261,12 @@ figcaption {
     align-items: center;
     justify-content: center;
 } 
+.flexboxbottom {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+} 
 /* .flagimagedimenstion {
     width: 80%;
     height: 300px;
