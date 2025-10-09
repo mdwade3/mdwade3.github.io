@@ -376,6 +376,7 @@ input[type="submit"] {
 label {
     margin-top: 10px;
     padding-left: 5px;
+    font-family: Tahoma, Helvetica, sans-serif;
 }
 textarea {
     border-radius: 10px;
@@ -460,6 +461,10 @@ details p {
     text-indent: 0;
 }
 footer {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     color: var(--background);
     background-color: var(--border);
     font-family: Tahoma, Helvetica, sans-serif;
@@ -467,6 +472,25 @@ footer {
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
 }
+
+/* .footerflexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;  
+    gap: 1em;
+} */
+/* .footerinline {
+    display: inline;
+} */
+/*.footeralighnleft {
+    text-align: left;
+}
+.footeralighnright {
+    text-align: right;
+} */
 footer p {
     margin: 5px;
     font-size: 75%;
