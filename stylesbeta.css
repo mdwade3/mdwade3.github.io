@@ -462,9 +462,9 @@ details p {
 }
 footer {
     display: grid;
-    gap: .5em;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    padding: 10px;
     color: var(--background);
     background-color: var(--border);
     font-family: Tahoma, Helvetica, sans-serif;
