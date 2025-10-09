@@ -11,6 +11,7 @@
     --backgroundbody: #efefef;
     --primaryadjacent: #0c152e; 
     --formborder: #363636;
+    --hyperlinkvisited: #0000CC;
 } 
 body { 
     background-color: var(--backgroundbody);
@@ -120,6 +121,9 @@ main p {
     margin: 0 0 10px;
     font-family: Tahoma, Helvetica, sans-serif;
     text-indent: 1em;
+}
+main p a:visited {
+    color: var(--hyperlinkvisited);
 }
 main ul {
     list-style-type: circle;
