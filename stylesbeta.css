@@ -10,6 +10,7 @@
     --border: #3d4256;
     --backgroundbody: #efefef;
     --primaryadjacent: #0c152e; 
+    --formborder: #363636;
 } 
 body { 
     background-color: var(--backgroundbody);
@@ -32,11 +33,14 @@ h1 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+h4 {
+    padding: 0 20px 0 0;
+}
 h2, h3, h4 {
     color: var(--primary);
     font-family: Georgia, "Times New Roman", serif;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     padding-left: 20px;
 }
 h2.flagheader {
@@ -44,6 +48,7 @@ h2.flagheader {
     background-color: var(--primary);
     font-family: Georgia, "Times New Roman", serif;
     text-align: center;
+    height: 40px;
     font-size: 200%;
     margin-top: 0px;
     margin-bottom: 0;
@@ -128,6 +133,23 @@ main li {
 p.topmargin {
     margin-top: 10px;
 }
+.disclaimer {
+    color: var(--border);
+    font-size: .8em;
+    
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.disclamerform {
+     color: var(--border);
+     margin-bottom: 0;
+}
+.nobottommargin {
+    margin-bottom: 0;
+}
+/* ul.bottommargin {
+    margin-bottom: 5px;
+} */
 .graphic {
     background-color: var(--background);
     background-repeat: no-repeat;
@@ -191,6 +213,17 @@ img {
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
     object-fit: cover;
+}
+ol {
+    margin-top: 0;
+}
+ol li img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 0;
+}
+ol img {
+    box-shadow: none;
 }
 .cover {
     object-fit: cover;
@@ -279,23 +312,69 @@ video[poster] {
 .submitbutton {
     background-color: var(--accent);
     color: var(--background);
-    border-radius: 5px;
+    border-radius: 10px;
 }
-.emailbutton {
+/* .emailbutton {
     margin-left: 20px;
+} */
+input {
+    border-radius: 10px;
+    border: solid var(--formborder);
 }
-input:hover {
+.inputmarginright {
+    margin-right: 20px;
+}
+input:hover[type="submit"] {
     background-color: var(--buttonselect);
     color: var(--background);
     cursor: pointer;
 }
-input[type="email"] {
+input[placeholder] {
+    padding-left: 10px;
+}
+textarea[placeholder] {
+    padding-left: 10px;
+}
+/* input[type="email"] {
     cursor: text;
     background-color: var(--background);
     color: var(--text);
-}
+} */
+.formhome {
+    margin-bottom: 10px;
+    margin-left: 20px;
+} 
 form {
     margin-bottom: 10px;
+    margin-left: 20px;
+}
+/* .formgrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .1em;
+    font-family: Tahoma, Helvetica, sans-serif;
+    width: 60%;
+    padding: 0 0 10px 20px;
+} */
+input[type="submit"] {
+    width: 10em;
+    margin-left: 0;
+    grid-column: 2 / 3;
+    margin-top: 10px;
+}
+.flexclassform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+label {
+    margin-top: 10px;
+    padding-left: 5px;
+}
+textarea {
+    border-radius: 10px;
+    margin-right: 20px;
+    border: solid var(--formborder);
 }
 caption {
     color: var(--primary);
@@ -393,15 +472,6 @@ footer a {
 footer a:hover {
     color: var(--secondary);
 }
-header {grid-area: header;}
-nav {grid-area: nav;}
-main {grid-area: main;}
-footer {grid-area: footer;}
-#wrapper {
-    background-color: var(--backgroundbody);
-    margin: auto;
-    width: 80%;
-}
 #wrapper {
     display: grid;
     gap: .5em;
@@ -411,4 +481,13 @@ footer {grid-area: footer;}
         "main     main" 
         "footer   footer"
         / 1fr 1fr;
+}
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+#wrapper {
+    background-color: var(--backgroundbody);
+    margin: auto;
+    width: 80%;
 }
