@@ -220,6 +220,7 @@ img {
 }
 ol {
     margin-top: 0;
+    font-family: Tahoma, Helvetica, sans-serif;
 }
 ol li img {
     margin-top: 5px;
