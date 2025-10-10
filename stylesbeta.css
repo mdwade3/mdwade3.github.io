@@ -493,8 +493,8 @@ footer {
     text-align: right;
 } */
 footer p {
-    margin: 5px;
-    font-size: 75%;
+    margin: 10px;
+    font-size: 80%;
 }
 footer a {
     color: var(--background);
