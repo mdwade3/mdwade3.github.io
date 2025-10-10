@@ -4,7 +4,6 @@
     --primary: #0c132c;
     --secondary: #bbdbf4; 
     --tertiarty: #e4f3ff; 
-    /* --accent: #8c1d3e; */
     --accent: #a7005a;
     --buttonselect: #820047;
     --border: #3d4256;
@@ -15,7 +14,6 @@
 }
 body { 
     background-color: var(--backgroundbody);
-    /* margin-top: 0; */
 }
 header {
     background-color: var(--background);
@@ -64,12 +62,12 @@ nav {
     background-color: var(--background);
     position: sticky;
     top: 0;
-    width: 100%; /* figure out why this is wrong (when I adjust size it also makes it icorrect) (the reason it is not included in the wrapper is because of the fixed position) */
+    width: 100%;
     font-family: Georgia, "Times New Roman", serif;
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
 }
-nav ul{ /* when clicked on, the border for the left list item is still present */
+nav ul{ 
     cursor: default;
     list-style-type: none;
     padding: 5px 0 0 0;
@@ -151,9 +149,6 @@ p.topmargin {
 .nobottommargin {
     margin-bottom: 0;
 }
-/* ul.bottommargin {
-    margin-bottom: 5px;
-} */
 .graphic {
     background-color: var(--background);
     background-repeat: no-repeat;
@@ -180,18 +175,6 @@ p.topmargin {
     background-position: center;
     border-radius: 10px;
 }
-/* #lighthousegraphic {
-    background-image: url(imagesCopy/lighthouse.png);
-    background-size: 100% 100%;
-    background-position: center;
-    border-radius: 10px;
-} */
-/* #sunflowergraphic {
-    background-image: url(imagesCopy/sunflower3.png);
-    background-size: 100% 100%;
-    background-position: center;
-    border-radius: 10px;
-} */
 #sunflowergraphic2 {
     background-image: url(imagesCopy/sunflower2.png);
     background-size: 100% 100%;
@@ -204,10 +187,6 @@ p.topmargin {
     background-position: center;
     border-radius: 10px;
 }
-/* #arizonagraphic {  YOU NEED TO TURN THIS INTO A IMG TAG 
-    background-image: url(imagesCopy/arizonaflag.png);
-    background-size: 100% 100%;
-} */
 .centerimage {
     display: flex;
     justify-content: center;
@@ -233,7 +212,7 @@ ol img {
 .cover {
     object-fit: cover;
 }
-.flagimage { /*set your height and width using this class selector? */
+.flagimage { 
     transition: all ease 0.5s;
 }
 a img:hover {
@@ -272,10 +251,6 @@ figcaption {
     align-items: end;
     justify-content: center;
 } 
-/* .flagimagedimenstion {
-    width: 80%;
-    height: 300px;
-} */
 video {
     border-radius: 10px;
     background-color: var(--backgroundbody);
@@ -295,39 +270,17 @@ video[poster] {
     gap: .5em;
     grid-template-rows: auto;
 }
-.contentextragridtop { /* this is needs to be fixed to be more proper, you shouldn't use an id just to color it */
+.contentextragridtop { 
     background-color: var(--background);
 } 
-.contentextragridbottom { /* this is needs to be fixed to be more proper, you shouldn't use an id just to color it */
+.contentextragridbottom { 
     background-color: var(--background);
 }
-/* #contentextragridflag {
-    background-color: var(--background);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    box-shadow: 1px 1px 3px var(--border);
-    border: 2px solid var(--primary)
-} */
-/* #content1 {
-    background-color: var(--tertiarty);
-}
-#content2 {
-    background-color: var(--tertiarty);
-}
-#content3 {
-    background-color: var(--secondary);
-}
-#content4 {
-    background-color: var(--secondary);
-} */
 .submitbutton {
     background-color: var(--accent);
     color: var(--background);
     border-radius: 10px;
 }
-/* .emailbutton {
-    margin-left: 20px;
-} */
 input {
     border-radius: 10px;
     border: solid var(--formborder);
@@ -346,23 +299,10 @@ input[placeholder] {
 textarea[placeholder] {
     padding-left: 10px;
 }
-/* input[type="email"] {
-    cursor: text;
-    background-color: var(--background);
-    color: var(--text);
-} */
 form {
     margin-bottom: 10px;
     margin-left: 20px;
 }
-/* .formgrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: .1em;
-    font-family: Tahoma, Helvetica, sans-serif;
-    width: 60%;
-    padding: 0 0 10px 20px;
-} */
 input[type="submit"] {
     width: 10em;
     margin-left: 0;
@@ -394,7 +334,7 @@ caption {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-table { /* would like to make the edges rounded */
+table { 
     width: 100%;
     margin: auto;
     border-collapse: collapse;
@@ -411,9 +351,6 @@ td {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-/* td.topalign {  LOOK BACK INTO USING THIS IF YOU CAN'T FIND EASIER SOLUTION
-    vertical-align: top;
-} */ 
 th, td {
     padding: 5px;
     border: 2px solid var(--primary);
@@ -473,25 +410,6 @@ footer {
     border-radius: 10px;
     box-shadow: 1px 1px 3px var(--border);
 }
-
-/* .footerflexbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;  
-    gap: 1em;
-} */
-/* .footerinline {
-    display: inline;
-} */
-/*.footeralighnleft {
-    text-align: left;
-}
-.footeralighnright {
-    text-align: right;
-} */
 footer p {
     margin: 10px;
     font-size: 80%;
